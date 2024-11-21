@@ -1,0 +1,165 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, rgb(0, 225, 255), rgb(0, 217, 255));
+    --card-bg: rgba(255, 255, 255, 0.2);
+    --text-colour: #333;
+    --button-hover: #0072ff;
+    --glass-border: rgba(255, 255, 255, 0.4);
+} 
+
+body .dark-mode {
+    --bg-gradient: linear-gradient(135deg, #2c3e50, #4ca1af);
+    --card-bg: rgba(255);
+    --text-colour: #333;
+    --button-bg: #16a045;
+    --button-hover: #1abc9c;
+    --glass-border: rgba(0, 0, 0, 0.4);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-colour);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background 0.5s, color 0.5s;
+
+}
+
+.weather-app {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.weather-card {
+    text-align: center;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 17px;
+    box-shadow: 0px 8px 32px rgba(0 0 0 0.2);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 500px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header {
+    margin-bottom: 15px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+header h1 i {
+    margin-right: 10px;
+}
+
+.toggle-btn{
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--text-colour);
+    transition: transform 0.3s;
+}
+
+.toggle-btn:hover {
+    transform: rotate(20deg);
+}
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+.search-box input{
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline: none;
+    width: 60%;
+    font-size: 16px;
+
+}
+
+.search-box button{
+    padding: 10px;
+    background: var(--button-bg);
+    border: none;
+    color: #fff;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s;
+}
+
+.search-box button:hover {
+    background: var(--button-hover);
+}
+
+.search-box button i {
+    font-size: 10px;
+    color: #fff;
+}
+
+.weather-info {
+    margin-top: 20px;
+}
+
+.weather-info h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.weather-icon{
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    display: block;
+    margin: fadeIn 1s ease-in-out;
+}
+
+.temperature {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.details p {
+    margin: 5px 0;
+}
+
+footer p {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
